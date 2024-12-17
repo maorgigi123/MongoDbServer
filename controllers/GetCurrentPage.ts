@@ -11,7 +11,7 @@ const GetCurrentPage = (Categories: any, DataByCategories: any) => {
       }
 
       // Find the page from the category's pages
-      const categoryObj = categoryData.categories.find((cat: { category: string }) => cat.category === category); // Specify type for 'cat'
+      const categoryObj = categoryData.categories.find((cat: { category: string }) => cat.category === category); 
 
       if (!categoryObj) {
         return res.status(404).json({ error: 'Category data not found' });

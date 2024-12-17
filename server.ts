@@ -41,8 +41,6 @@ app.get('/images', async (req: Request, res: Response) => {
 
 
 
-
-
 // Start the server
 app.listen(process.env.PORT || 3001, () => {
   console.log('server is running on port 3001');
