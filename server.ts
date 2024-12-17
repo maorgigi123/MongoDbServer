@@ -8,7 +8,7 @@ dotenv.config();
 
 import GetCurrentPage from './controllers/GetCurrentPage';  
 
-// Import your Models
+// Import Models
 import Categories from './Schema/Categories';
 import DataByCategories from './Schema/DataByCategories';
 
@@ -28,7 +28,7 @@ mongoose.connect(mongoURI)
 app.use(cors());
 app.use(helmet());  // מוסיף הגנה למגוון בעיות אבטחה
 
-// Correctly invoke the GetCurrentPage function
+// invoke the GetCurrentPage function when route is images
 app.get('/images', async (req: Request, res: Response) => {
   try {
     const getCurrentPageHandler = GetCurrentPage(Categories, DataByCategories);
