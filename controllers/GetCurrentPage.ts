@@ -3,7 +3,6 @@ const GetCurrentPage = (Categories: any, DataByCategories: any) => {
   return async (req: Request, res: Response) => {
     const { category, page } = req.query;
     try {
-
       if(typeof category !== 'string' || isNaN(Number(page))){
         return res.status(404).json({error: 'Invalid query parameters'})
       }
@@ -43,3 +42,5 @@ const GetCurrentPage = (Categories: any, DataByCategories: any) => {
     }
   };
 };
+
+export default GetCurrentPage;
